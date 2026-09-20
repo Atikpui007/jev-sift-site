@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jev-sift — less junk in Claude's context</title>
+    <meta name="description" content="A Claude Code plugin. Every grep, file read and web search is filtered through Jev before Claude sees it, so you stop paying for results that were never relevant." />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0B0D10" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FAFBF9" />
+    <meta property="og:title" content="jev-sift — less junk in Claude's context" />
+    <meta property="og:description" content="A Claude Code plugin. Every grep, file read and web search is filtered through Jev before Claude sees it, so you stop paying for results that were never relevant." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jev-sift.vercel.app/" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+      <script>
+      // set the theme class before first paint so there is no flash
+      (function () {
+        try {
+          var t = new URLSearchParams(location.search).get("theme") || localStorage.getItem("jev-sift-theme");
+          if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+          if (t === "dark") document.documentElement.classList.add("dark");
+        } catch (e) { document.documentElement.classList.add("dark"); }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

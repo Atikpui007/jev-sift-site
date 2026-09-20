@@ -1,0 +1,201 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: var(--font-sans);
+    --font-sans: 'Geist Variable', sans-serif;
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.205 0 0);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.97 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.922 0 0);
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --radius: 0.625rem;
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.922 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+}
+/* Theme: light by default, .dark for dark. One lime accent; terminals are dark in both modes. */
+:root {
+  --background: #FAFBF9;
+  --foreground: #0B0D10;
+  --card: #FFFFFF;
+  --card-foreground: #0B0D10;
+  --popover: #FFFFFF;
+  --popover-foreground: #0B0D10;
+  --primary: #4A7A07;
+  --primary-foreground: #FFFFFF;
+  --secondary: #EEF2E8;
+  --secondary-foreground: #2B3A12;
+  --muted: #F1F4EE;
+  --muted-foreground: #5C6670;
+  --accent: #EEF2E8;
+  --accent-foreground: #0B0D10;
+  --destructive: #D93F3F;
+  --border: #E2E7DE;
+  --input: #E2E7DE;
+  --ring: #4A7A07;
+  --radius: 0.75rem;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --ground-a: rgb(198 243 91 / 0.28);
+  --ground-b: rgb(120 170 255 / 0.14);
+  --lift: 0 1px 2px rgb(11 13 16 / 0.05), 0 18px 44px -18px rgb(11 13 16 / 0.22);
+}
+.dark {
+  --background: #0B0D10;
+  --foreground: #E8EBEF;
+  --card: #111419;
+  --card-foreground: #E8EBEF;
+  --popover: #111419;
+  --popover-foreground: #E8EBEF;
+  --primary: #C6F35B;
+  --primary-foreground: #0B0D10;
+  --secondary: #1A1F26;
+  --secondary-foreground: #C9CFD8;
+  --muted: #161A20;
+  --muted-foreground: #8B94A3;
+  --accent: #1A1F26;
+  --accent-foreground: #E8EBEF;
+  --destructive: #FF6B6B;
+  --border: #222831;
+  --input: #222831;
+  --ring: #C6F35B;
+  --ground-a: rgb(198 243 91 / 0.10);
+  --ground-b: rgb(90 140 255 / 0.06);
+  --lift: 0 0 0 1px rgb(255 255 255 / 0.04), 0 24px 60px -24px rgb(0 0 0 / 0.8);
+}
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+html { color-scheme: light; }
+html.dark { color-scheme: dark; }
+body { background: var(--background); }
+.ground {
+  background:
+    radial-gradient(900px 480px at 50% -10%, var(--ground-a) 0%, transparent 62%),
+    radial-gradient(800px 520px at 100% 0%, var(--ground-b) 0%, transparent 60%),
+    var(--background);
+}
+.lift { box-shadow: var(--lift); }
+/* Terminals keep the dark palette in both modes, including the tokens used inside them. */
+.term {
+  background: #0F1216; color: #DDE1E7; border: 1px solid #222831;
+  --primary: #C6F35B; --muted: #161A20; --muted-foreground: #78818F; --border: #222831; --foreground: #DDE1E7;
+}
+.term-muted { color: #78818F; }
+.install-card { background: linear-gradient(135deg, #D6FA78 0%, #A8E03A 100%); color: #0B0D10; }
