@@ -1,6 +1,6 @@
 # jev-sift site
 
-Marketing site for jev-sift. Vite + React + Tailwind + shadcn/ui, deployed on Vercel at https://jev-sift.vercel.app.
+Marketing site for jev-sift. Vite + React + Tailwind + shadcn/ui, deployed on Vercel at https://jev-sift.vercel.app. Pushes to `main` deploy automatically.
 
 ```
 npm install
